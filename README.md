@@ -1,11 +1,11 @@
 # Cloud gaming
 
-This project allows users to play computer games on browsers, without download or installation, just at the push of a button.
-This means that users can play AAA games on their low-spec computers or smartphones or even smart TVs anywhere and anytime.
-The only requirement is fast and reliable internet.
+Этот проект позволяет пользователям играть в компьютерные игры в браузере, без загрузки и установки, одним нажатием кнопки.
+Это означает, что пользователи могут играть в игры AAA на своих низкопробных компьютерах, смартфонах или даже "умных" телевизорах в любое время и в любом месте.
+Единственное требование - быстрый и надежный интернет.
 
-The difference between this project and other cloud-gaming projects is that it allows users to offer their computers (providers) to other users (players) and make profits.
-That means games are run in computers of providers and streamed to browsers of players.
+Отличие этого проекта от других облачных игровых проектов в том, что он позволяет пользователям предлагать свои компьютеры (провайдеров) другим пользователям (игрокам) и получать прибыль.
+То есть игры запускаются на компьютерах провайдеров и транслируются в браузеры игроков.
 
 ## Demo
 
@@ -43,8 +43,8 @@ npm start
 
 ## Design
 
-This project is inspired by [cloudmorph](https://github.com/giongto35/cloud-morph) and [drova.io](https://drova.io/).
-The basic idea of the project is running games in Wine within Docker containers.
-The video and audio from games are captured by Xvfb, Pulseaudio and processed by ffmpeg and then streamed to browsers of users using WebRTC.
-Besides that, input from users (e.g. mouse clicks, keyboard events) are also captured and delivered to Syncinput using WebRTC Data channel.
-Syncinput is a process that receives those input and simulate relevant events for the games using WinAPI.
+Этот проект вдохновлен [cloudmorph](https://github.com/giongto35/cloud-morph) и [drova.io](https://drova.io/).
+Основная идея проекта - запуск игр в Wine внутри контейнеров Docker.
+Видео и звук из игр захватываются Xvfb, Pulseaudio, обрабатываются ffmpeg, а затем транслируются в браузеры пользователей с помощью WebRTC.
+Кроме того, входные данные от пользователей (например, щелчки мыши, события на клавиатуре) также перехватываются и передаются в Syncinput с помощью канала WebRTC Data.
+Syncinput - это процесс, который получает эти данные и моделирует соответствующие события для игр с помощью WinAPI.
